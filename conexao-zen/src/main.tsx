@@ -5,6 +5,7 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Error from './routes/Error/index.tsx';
+import Cadastro from './routes/Cadastro/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
-
+    {path:"/Cadastro", element:<Cadastro/>}  
     ]
   }
 ]);
