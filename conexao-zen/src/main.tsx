@@ -9,9 +9,10 @@ import Cadastro from './routes/Cadastro/index.tsx';
 import Login from './routes/Login/index.tsx';
 import Integrantes from './routes/Integrantes/index.tsx';
 import Programas from './routes/Programas/index.tsx';
-import CadastroPrograma from './routes/Programas/cadastro.tsx';
-import RotaProtegida from './components/RotaProtegida/RotaProtegida.tsx';
 import { ProvedorAutenticacao } from './context/ContextoAuten.tsx';
+import Checkin from './routes/Checkin/index.tsx';
+import RotaProtegida from './components/RotaProtegida/RotaProtegida.tsx';
+import CadastroPrograma from './routes/Programas/cadastro.tsx';
 
 const router = createBrowserRouter([
   {
@@ -19,21 +20,22 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
-    {path:"/cadastro", element:<Cadastro/>},
-    {path:"/login", element:<Login/>},
-    {path:"/integrantes", element:<Integrantes/>},
-    {path:"/programas", element:<Programas/>},
-    {path:"/programas/novo", element:<CadastroPrograma/>}  
-    ]
-  },
-  {
+      // --- Rotas públicas ---
+      { path: "/cadastro", element: <Cadastro /> },
+      { path: "/login", element: <Login /> },
+      { path: "/integrantes", element: <Integrantes /> },
+
+      // --- Rotas protegidas ---
+      {
         element: <RotaProtegida />,
         children: [
           { path: "/programas", element: <Programas /> },
-          { path: "/programas/novo", element: <CadastroPrograma /> }
-          
+          { path: "/programas/novo", element: <CadastroPrograma /> },
+          { path: "/checkin", element: <Checkin /> }
         ]
       }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
