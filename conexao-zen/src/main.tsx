@@ -15,6 +15,7 @@ import RotaProtegida from './components/RotaProtegida/RotaProtegida.tsx';
 import CadastroPrograma from './routes/Programas/cadastro.tsx';
 import Home from './routes/Home/index.tsx';
 import Sobre from './routes/Sobre/index.tsx';
+import FAQ from './routes/Faq/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { path: "/login", element: <Login /> },
       { path: "/integrantes", element: <Integrantes /> },
       { path: "/sobre", element:<Sobre/>},
+      { path: "/faq", element: <FAQ/>},
 
       // --- Rotas protegidas ---
       {
