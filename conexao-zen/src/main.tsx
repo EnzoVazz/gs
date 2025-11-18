@@ -13,6 +13,7 @@ import { ProvedorAutenticacao } from './context/ContextoAuten.tsx';
 import Checkin from './routes/Checkin/index.tsx';
 import RotaProtegida from './components/RotaProtegida/RotaProtegida.tsx';
 import CadastroPrograma from './routes/Programas/cadastro.tsx';
+import Home from './routes/Home/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     children: [
       // --- Rotas públicas ---
       { path: "/cadastro", element: <Cadastro /> },
+      { path:  "/", element: <Home/>},
       { path: "/login", element: <Login /> },
       { path: "/integrantes", element: <Integrantes /> },
 
