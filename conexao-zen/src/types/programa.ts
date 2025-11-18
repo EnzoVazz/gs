@@ -13,3 +13,11 @@ export type ProgramaType = {
   descricao_programa: string;
   empresa: EmpresaType;
 };
+
+export type ProgramaForm = {
+  nm_programa: string;
+  dt_inicio_programa: string;
+  dt_fim_programa: string;
+  descricao_programa: string;
+  id_empresa: number;
+};
