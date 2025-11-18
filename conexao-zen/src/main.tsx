@@ -8,6 +8,7 @@ import Error from './routes/Error/index.tsx';
 import Cadastro from './routes/Cadastro/index.tsx';
 import Login from './routes/Login/index.tsx';
 import Integrantes from './routes/Integrantes/index.tsx';
+import Programas from './routes/Programas/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
     children: [
     {path:"/cadastro", element:<Cadastro/>},
     {path:"/login", element:<Login/>},
-    {path:"/integrantes", element:<Integrantes/>}  
+    {path:"/integrantes", element:<Integrantes/>},
+    {path:"/programas", element:<Programas/>}  
     ]
   }
 ]);
