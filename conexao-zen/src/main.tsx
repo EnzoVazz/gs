@@ -14,6 +14,7 @@ import Checkin from './routes/Checkin/index.tsx';
 import RotaProtegida from './components/RotaProtegida/RotaProtegida.tsx';
 import CadastroPrograma from './routes/Programas/cadastro.tsx';
 import Home from './routes/Home/index.tsx';
+import Sobre from './routes/Sobre/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path:  "/", element: <Home/>},
       { path: "/login", element: <Login /> },
       { path: "/integrantes", element: <Integrantes /> },
+      { path: "/sobre", element:<Sobre/>},
 
       // --- Rotas protegidas ---
       {
