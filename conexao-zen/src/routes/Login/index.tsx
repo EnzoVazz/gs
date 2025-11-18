@@ -2,12 +2,14 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import type { LoginForm } from '../../types/login'; 
 import { Link } from 'react-router-dom';
+import { useAutenticacao } from '../../context/ContextoAuten';
 
 const API_URL = "https://gs-quarkus.onrender.com"; 
 
 export default function Login() {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginForm>();
   const navigate = useNavigate();
+  const {entrar} = useAutenticacao();
 
   const onSubmit = async (data: LoginForm) => {
     try {
@@ -30,6 +32,12 @@ export default function Login() {
       }
 
       const funcionarioLogado = await response.json();
+      
+      entrar({
+        id_funcionario: funcionarioLogado.id_funcionario,
+        nm_funcionario: funcionarioLogado.nm_funcionario,
+        email: funcionarioLogado.email
+      });
       
       alert(`Bem-vindo, ${funcionarioLogado.nm_funcionario}!`);
       navigate('/'); 

@@ -10,6 +10,8 @@ import Login from './routes/Login/index.tsx';
 import Integrantes from './routes/Integrantes/index.tsx';
 import Programas from './routes/Programas/index.tsx';
 import CadastroPrograma from './routes/Programas/cadastro.tsx';
+import RotaProtegida from './components/RotaProtegida/RotaProtegida.tsx';
+import { ProvedorAutenticacao } from './context/ContextoAuten.tsx';
 
 const router = createBrowserRouter([
   {
@@ -23,11 +25,21 @@ const router = createBrowserRouter([
     {path:"/programas", element:<Programas/>},
     {path:"/programas/novo", element:<CadastroPrograma/>}  
     ]
-  }
+  },
+  {
+        element: <RotaProtegida />,
+        children: [
+          { path: "/programas", element: <Programas /> },
+          { path: "/programas/novo", element: <CadastroPrograma /> }
+          
+        ]
+      }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ProvedorAutenticacao>
+      <RouterProvider router={router} />
+    </ProvedorAutenticacao>
   </React.StrictMode>
 );
