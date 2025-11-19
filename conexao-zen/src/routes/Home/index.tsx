@@ -45,7 +45,7 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-pink-500 hover:shadow-lg transition">
+        <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500 hover:shadow-lg transition">
           <div className="text-4xl mb-4">🧘‍♀️</div>
           <h3 className="text-xl font-semibold text-purple-800 mb-2">Programas de Saúde</h3>
           <p className="text-gray-600">
@@ -53,7 +53,7 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500 hover:shadow-lg transition">
+        <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500 hover:shadow-lg transition">
           <div className="text-4xl mb-4">🤝</div>
           <h3 className="text-xl font-semibold text-purple-800 mb-2">Suporte Contínuo</h3>
           <p className="text-gray-600">
