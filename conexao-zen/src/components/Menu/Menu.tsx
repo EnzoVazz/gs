@@ -18,8 +18,9 @@ export default function Menu() {
         <ul className="flex gap-4 items-center">
           {estaAutenticado ? (
             <>
-              <li><Link to="/programas" className="hover:text-purple-200">Programas</Link></li>
-              <li><Link to="/checkin" className="hover:text-purple-200">Check-in</Link></li>
+              <li><Link to="/programas" className="hover:text-purple-200 font-semibold">Programas</Link></li>
+              <li><Link to="/checkin" className="hover:text-purple-200 font-semibold">Check-in</Link></li>
+              <li><Link to="/perfil" className="hover:text-purple-200 font-semibold">Meu Perfil</Link></li>
               <li>
                 <button onClick={fazerLogout} className="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-sm font-bold">
                   Sair

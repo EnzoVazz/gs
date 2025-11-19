@@ -4,6 +4,8 @@ interface UsuarioLogado {
   id_funcionario: number;
   nm_funcionario: string;
   email: string;
+  cargo: string;
+  nome_empresa: string;
 }
 
 interface TipoContextoAuth {

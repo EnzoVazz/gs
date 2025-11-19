@@ -36,7 +36,9 @@ export default function Login() {
       entrar({
         id_funcionario: funcionarioLogado.id_funcionario,
         nm_funcionario: funcionarioLogado.nm_funcionario,
-        email: funcionarioLogado.email
+        email: funcionarioLogado.email,
+        cargo: funcionarioLogado.cargo,
+        nome_empresa: funcionarioLogado.empresa.nm_empresa
       });
       
       alert(`Bem-vindo, ${funcionarioLogado.nm_funcionario}!`);

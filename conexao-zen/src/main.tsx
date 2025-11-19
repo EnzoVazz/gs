@@ -17,6 +17,7 @@ import Home from './routes/Home/index.tsx';
 import Sobre from './routes/Sobre/index.tsx';
 import FAQ from './routes/Faq/index.tsx';
 import Contato from './routes/Contato/index.tsx';
+import Perfil from './routes/Perfil/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,8 @@ const router = createBrowserRouter([
         children: [
           { path: "/programas", element: <Programas /> },
           { path: "/programas/novo", element: <CadastroPrograma /> },
-          { path: "/checkin", element: <Checkin /> }
+          { path: "/checkin", element: <Checkin /> },
+          { path: "perfil", element:<Perfil/>}
         ]
       }
     ]
