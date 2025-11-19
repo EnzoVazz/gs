@@ -16,6 +16,7 @@ import CadastroPrograma from './routes/Programas/cadastro.tsx';
 import Home from './routes/Home/index.tsx';
 import Sobre from './routes/Sobre/index.tsx';
 import FAQ from './routes/Faq/index.tsx';
+import Contato from './routes/Contato/index.tsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: "/integrantes", element: <Integrantes /> },
       { path: "/sobre", element:<Sobre/>},
       { path: "/faq", element: <FAQ/>},
+      { path: "/contato", element:<Contato/>},
 
       // --- Rotas protegidas ---
       {
