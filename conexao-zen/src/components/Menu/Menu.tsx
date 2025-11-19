@@ -16,8 +16,6 @@ export default function Menu() {
         <Link to="/" className="text-xl font-bold">Conexão Zen</Link>
         
         <ul className="flex gap-4 items-center">
-          <li><Link to="/integrantes" className="hover:text-purple-200">Integrantes</Link></li>
-
           {estaAutenticado ? (
             <>
               <li><Link to="/programas" className="hover:text-purple-200">Programas</Link></li>
