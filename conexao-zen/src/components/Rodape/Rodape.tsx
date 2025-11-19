@@ -1,18 +1,52 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function Rodape() {
   return (
-    <footer className="bg-purple-100 text-purple-900 py-8 mt-8">
-      <div className="container mx-auto text-center">
-        <div className="flex flex-wrap justify-center gap-6 mb-4 font-medium">
-          <Link to="/sobre" className="hover:text-purple-600 transition">Sobre Nós</Link>
-          <Link to="/faq" className="hover:text-purple-600 transition">FAQ</Link>
-          <Link to="/contato" className="hover:text-purple-600 transition">Contato</Link>
-          <Link to="/integrantes" className="hover:text-purple-600 transition">Integrantes</Link>
+    <footer className="bg-gradient-to-r from-purple-900 to-purple-800 text-white mt-12">
+      <div className="container mx-auto px-4 py-8">
+        
+        <div className="flex flex-col items-center">
+          <h2 className="text-2xl font-bold mb-6 tracking-wide">
+            Conexão Zen
+          </h2>
+
+          <nav className="flex flex-wrap justify-center gap-6 mb-8">
+            <Link 
+              to="/sobre" 
+              className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-white/10 transition duration-300 font-medium"
+            >
+              📖 Sobre Nós
+            </Link>
+            
+            <Link 
+              to="/faq" 
+              className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-white/10 transition duration-300 font-medium"
+            >
+              ❓ FAQ
+            </Link>
+            
+            <Link 
+              to="/contato" 
+              className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-white/10 transition duration-300 font-medium"
+            >
+              ✉️ Contato
+            </Link>
+            
+            <Link 
+              to="/integrantes" 
+              className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-white/10 transition duration-300 font-medium"
+            >
+              👥 Integrantes
+            </Link>
+          </nav>
+
+          <div className="w-full max-w-md h-px bg-purple-700/50 mb-6"></div>
+
+          <p className="text-purple-100 text-sm text-center">
+            &copy; Conexão Zen - 1TDSPF - Global Solution
+          </p>
         </div>
-        <p className="text-sm opacity-75">
-          &copy; 2025 Conexão Zen - 1TDSPF - Global Solution
-        </p>
+
       </div>
     </footer>
   );
