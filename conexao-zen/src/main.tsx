@@ -18,6 +18,7 @@ import Sobre from './routes/Sobre/index.tsx';
 import FAQ from './routes/Faq/index.tsx';
 import Contato from './routes/Contato/index.tsx';
 import Perfil from './routes/Perfil/index.tsx';
+import { ProvedorTema } from './context/ThemeContext.tsx';
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ProvedorAutenticacao>
-      <RouterProvider router={router} />
+      <ProvedorTema>
+        <RouterProvider router={router} />
+      </ProvedorTema>
     </ProvedorAutenticacao>
   </React.StrictMode>
 );

@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAutenticacao } from '../../context/ContextoAuten';
+import BotaoTema from '../BotaoTema/BotaoTema';
 
 export default function Menu() {
   const {estaAutenticado, sair} = useAutenticacao();
@@ -11,11 +12,12 @@ export default function Menu() {
   }
 
   return (
-    <nav className="bg-purple-800 text-white p-4 shadow-md">
+    <nav className="bg-purple-800 dark:bg-gray-900 text-white p-4 shadow-md transition-colors duration-300">
       <div className="container mx-auto flex flex-wrap justify-between items-center">
         <Link to="/" className="text-xl font-bold">Conexão Zen</Link>
         
         <ul className="flex gap-4 items-center">
+          <li><BotaoTema /></li>
           {estaAutenticado ? (
             <>
               <li><Link to="/programas" className="hover:text-purple-200 font-semibold">Programas</Link></li>
