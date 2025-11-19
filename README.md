@@ -114,7 +114,7 @@ src/
 
 ## 🔗 Links Importantes
 ```
-Link do site: 
+Link do site: https://conexao-zen.vercel.app/
 Link do repositório: https://github.com/EnzoVazz/gs
 Link do vídeo do youtube: 
 ```
