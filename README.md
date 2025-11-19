@@ -52,7 +52,7 @@ Pré-requisitos: Node.js (v18+) e NPM instalados.
     ```
 2.  Entre na pasta do projeto:
     ```bash
-    cd conexao-zen-web
+    cd conexao-zen
     ```
 3.  Instale as dependências:
     ```bash
@@ -104,6 +104,11 @@ src/
 
 ## 📸 Screenshots
 
+### Página Inicial
+![Home](./conexao-zen/public/img/home.png)
+
+### Página Inicial (Tema Escuro)
+![DarkHome](./conexao-zen/public/img/darkhome.png)
 
 ---
 
